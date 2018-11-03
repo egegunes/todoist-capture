@@ -1,0 +1,5 @@
+capture/secrets.py
+venv
+*.pyc
+__pycache__
+*.egg-info*
