@@ -16,3 +16,9 @@ Create a file named ".todoist" in your $HOME.
 [todoist]
 token=your_todoist_api_access_token
 ```
+
+## Usage
+
+```
+$ capture "Buy coffee beans"
+```
