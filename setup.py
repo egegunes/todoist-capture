@@ -8,7 +8,7 @@ with open('README.md') as f:
 
 setup(
     name='todoist-capture',
-    version='1.0.3',
+    version='1.0.4',
     description='Capture tasks to your Inbox from command line',
     long_description=readme,
     long_description_content_type='text/markdown',

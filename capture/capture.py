@@ -1,4 +1,8 @@
-import configparser
+try:
+    import configparser
+except ImportError:
+    import ConfigParser as configparser
+
 import os
 import sys
 
@@ -8,9 +12,12 @@ def run():
     config = configparser.ConfigParser()
     config.read(os.path.join(os.getenv("HOME"), ".todoist"))
 
-    print(config["todoist"]["token"])
+    try:
+        token = config["todoist"]["token"]
+    except AttributeError:
+        token = config.get("todoist", "token")
 
-    api = todoist.TodoistAPI(config["todoist"]["token"])
+    api = todoist.TodoistAPI(token)
 
     if len(sys.argv) < 2:
         print("Task content is required")
